@@ -6,14 +6,14 @@ import 'dart:math' as math;
 
 import 'package:webview_flutter/webview_flutter.dart';
 
-class WebBrowserView extends StatefulWidget {
-  const WebBrowserView({Key? key}) : super(key: key);
+class InstagramView extends StatefulWidget {
+  const InstagramView({Key? key}) : super(key: key);
 
   @override
-  _WebBrowserViewState createState() => _WebBrowserViewState();
+  _InstagramViewState createState() => _InstagramViewState();
 }
 
-class _WebBrowserViewState extends State<WebBrowserView> {
+class _InstagramViewState extends State<InstagramView> {
   double faceAngle = 0.0;
   double deviceAngle = 0.0;
 
@@ -39,7 +39,7 @@ class _WebBrowserViewState extends State<WebBrowserView> {
             left: 0,
             right: 0,
             child: WebView(
-              initialUrl: "https://m.naver.com",
+              initialUrl: "https://www.instagram.com/?hl=ko",
               javascriptMode: JavascriptMode.unrestricted,
             ),
           ),

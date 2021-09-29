@@ -40,6 +40,7 @@ class _YoutubeViewState extends State<YoutubeView> {
             right: 0,
             child: WebView(
               initialUrl: "https://www.youtube.com/",
+              javascriptMode: JavascriptMode.unrestricted,
             ),
           ),
           Positioned(

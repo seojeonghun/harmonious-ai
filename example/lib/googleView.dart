@@ -40,6 +40,7 @@ class _GoogleViewState extends State<GoogleView> {
             right: 0,
             child: WebView(
               initialUrl: "https://www.google.co.kr/",
+              javascriptMode: JavascriptMode.unrestricted,
             ),
           ),
           Positioned(

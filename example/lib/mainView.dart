@@ -65,30 +65,35 @@ class _MainViewState extends State<MainView> {
               
                 width: 100,
                 height: 100,
+                child: CupertinoButton(
+              padding: EdgeInsets.all(0),
+              onPressed: () => Navigator.pushNamed(context, "/instagram"),
                 color: Colors.grey,
                 child: Image(
                 width: 80,
                 height: 80,
-                image: AssetImage("images/plus.png"),
+                image: AssetImage("images/instagram.png"),
               )
               ),
           )
+          ),
           ),
            Positioned(
             bottom: 240,
             left: 40,
              child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-            child: CupertinoButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () => Navigator.pushNamed(context, "/youtube"),
+           
               child: Container(
                 width: 100,
                 height: 100,
+                child: CupertinoButton(
+              padding: EdgeInsets.all(0),
+              onPressed: () => Navigator.pushNamed(context, "/youtube"),
                 color: Colors.grey,
               child: Image(
-                width: 100,
-                height: 100,
+                width: 150,
+                height: 150,
                 image: AssetImage("images/youtube.png"),
               ),
             ),
@@ -100,16 +105,17 @@ class _MainViewState extends State<MainView> {
             right: 40,
              child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-            child: CupertinoButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () => Navigator.pushNamed(context, "/web"),
+            
               child: Container(
                 width: 100,
                 height: 100,
+                child: CupertinoButton(
+              padding: EdgeInsets.all(0),
+              onPressed: () => Navigator.pushNamed(context, "/web"),
                 color: Colors.grey,
               child: Image(
-                width: 100,
-                height: 100,
+                width: 80,
+                height: 80,
                 image: AssetImage("images/naver.png"),
               ),
             ),

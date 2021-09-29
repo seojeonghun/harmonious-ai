@@ -5,6 +5,7 @@ import 'package:flutter_mediapipe_example/webBrowserView.dart';
 import 'package:flutter_mediapipe_example/youtubeView.dart';
 
 import 'googleView.dart';
+import 'instagramView.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,7 @@ class _MyAppState extends State<MyApp> {
         "/web": (_) => WebBrowserView(),
         "/youtube": (_) => YoutubeView(),
         "/google": (_) => GoogleView(),
+        "/instagram": (_) => InstagramView(),
       },
     );
   }
