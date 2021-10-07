@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mediapipe_example/webBrowserView.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -35,95 +36,93 @@ class _MainViewState extends State<MainView> {
               ),
             ),
           ),
-          
-         
           Positioned(
-              bottom: 100,
-              left: 40,
-              child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Container(
-                width: 100,
-                height: 100,
-                child: CupertinoButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () => Navigator.pushNamed(context, "/google"),
-                color: Colors.grey,
-                child: Image(
-                width: 100,
-                height: 100,
-                image: AssetImage("images/google.png"),
-              )),
-          )),
+            bottom: 100,
+            left: 40,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  child: CupertinoButton(
+                      padding: EdgeInsets.all(0),
+                      onPressed: () => pushPage("https://google.com"),
+                      color: Colors.grey,
+                      child: Image(
+                        width: 100,
+                        height: 100,
+                        image: AssetImage("images/google.png"),
+                      )),
+                )),
           ),
           Positioned(
-              bottom: 100,
-              right: 40,
-              child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Container(
-              
-                width: 100,
-                height: 100,
-                child: CupertinoButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () => Navigator.pushNamed(context, "/instagram"),
-                color: Colors.grey,
-                child: Image(
-                width: 80,
-                height: 80,
-                image: AssetImage("images/instagram.png"),
-              )
-              ),
-          )
+            bottom: 100,
+            right: 40,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  child: CupertinoButton(
+                      padding: EdgeInsets.all(0),
+                      onPressed: () => pushPage("https://instagram.com"),
+                      color: Colors.grey,
+                      child: Image(
+                        width: 80,
+                        height: 80,
+                        image: AssetImage("images/instagram.png"),
+                      )),
+                )),
           ),
-          ),
-           Positioned(
+          Positioned(
             bottom: 240,
             left: 40,
-             child: ClipRRect(
+            child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-           
               child: Container(
                 width: 100,
                 height: 100,
                 child: CupertinoButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () => Navigator.pushNamed(context, "/youtube"),
-                color: Colors.grey,
-              child: Image(
-                width: 150,
-                height: 150,
-                image: AssetImage("images/youtube.png"),
+                  padding: EdgeInsets.all(0),
+                  onPressed: () => pushPage("https://youtube.com"),
+                  color: Colors.grey,
+                  child: Image(
+                    width: 150,
+                    height: 150,
+                    image: AssetImage("images/youtube.png"),
+                  ),
+                ),
               ),
             ),
           ),
-           ),
-           ),
-         Positioned(
+          Positioned(
             bottom: 240,
             right: 40,
-             child: ClipRRect(
+            child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-            
               child: Container(
                 width: 100,
                 height: 100,
                 child: CupertinoButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () => Navigator.pushNamed(context, "/web"),
-                color: Colors.grey,
-              child: Image(
-                width: 80,
-                height: 80,
-                image: AssetImage("images/naver.png"),
+                  padding: EdgeInsets.all(0),
+                  onPressed: () => pushPage("https://naver.com"),
+                  color: Colors.grey,
+                  child: Image(
+                    width: 80,
+                    height: 80,
+                    image: AssetImage("images/naver.png"),
+                  ),
+                ),
               ),
             ),
           ),
-           ),
-           ),
         ],
       ),
     );
+  }
+
+  void pushPage(String url) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (_) => WebBrowserView(url)));
   }
 }
